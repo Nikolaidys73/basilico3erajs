@@ -187,20 +187,25 @@ function enviarCompra(e){
 } else {
 
     const btn = document.getElementById('button');
-    
-       btn.value = 'Enviando...';
-    
-       const serviceID = 'default_service';
-       const templateID = 'template_w0kcjl5';
-    
-       emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-          btn.value = 'Finalizar compra';
-          alert('Email enviado correctamente!');
-        }, (err) => {
-          btn.value = 'Finalizar compra';
-          alert(JSON.stringify(err));
-        });
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_sizac6g';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
     
     
         const spinner = document.querySelector('#spinner')
