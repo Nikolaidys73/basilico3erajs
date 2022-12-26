@@ -130,15 +130,15 @@ footer {
 
 .iconos a {
     text-decoration: none;
-    color: #FF99C9;
+    color: #F08800;
     margin: 10px;
     font-size: 25px;
 }
 
 .iconos a i:hover {
-    background-color: #FF99C9;
+    background-color: #F08800;
     color: white;
-    border: 1p solid #FF99C9;
+    border: 1p solid #F08800;
     border-radius: 40px;
 }
 
